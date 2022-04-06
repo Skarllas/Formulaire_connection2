@@ -1,0 +1,17 @@
+#totoa {
+    margin: auto;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 20px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px 2px black;
+}
+
+#toto {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}

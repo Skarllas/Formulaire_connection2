@@ -16,18 +16,27 @@ require "db_connect.php"; ?>
 </head>
 
 <body>
-    <h1>TEST INSERT</h1>
 
-    <form action="index_traitement.php" method="POST">
+    <div id="totoa">
+        <h1>TEST INSERT</h1>
 
-        <div> <input name="prenom" type="text" placeholder="prenom"></div>
-        <br>
-        <div> <input name="nom" type="text" placeholder="nom"></div>
-        <br>
-        <div> <button type="submit">Envoye</button></div>
+    </div>
 
+    <div id="toto">
+        <form action="index_traitement.php" method="POST">
 
-    </form>
+            <div> <input name="prenom" type="text" placeholder="prenom"></div>
+            <br>
+            <div> <input name="nom" type="text" placeholder="nom"></div>
+            <br>
+            <div> <input name="password" type="text" placeholder="password"></div>
+            <br>
+            <div> <button type="submit">Envoye</button></div>
+           
+
+        </form>
+    </div>
+
 
 
 

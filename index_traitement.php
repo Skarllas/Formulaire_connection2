@@ -8,11 +8,17 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))) {
 
     $prenom = htmlspecialchars($_POST["prenom"]);
     $nom = htmlspecialchars($_POST["nom"]);
+    $password = htmlspecialchars($_POST["password"]);
 
-    $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `id`) VALUES (:prenom, :nom , NULL)");
+
+
+
+
+    $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `password`, `id`) VALUES (:prenom, :nom , :password, NULL)");
     $insert->execute(array(
         "prenom" => $prenom,
-        "nom" => $nom
+        "nom" => $nom,
+        "password" => $password
     ));
 } else echo("tu n'es pas connecter");
 ?>
@@ -21,7 +27,7 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index_traitement.php">
+    <link rel="stylesheet" href="index_traitement.css">
     <title>Document</title>
 </head>
 <body>
