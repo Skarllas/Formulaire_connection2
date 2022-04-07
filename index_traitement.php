@@ -6,17 +6,16 @@ session_start();
 require_once "db_connect.php";
 
 
-$prenom = htmlspecialchars($_POST["prenom"]);
-$nom = htmlspecialchars($_POST["nom"]);
-$password = htmlspecialchars($_POST["password"]);
-$retype_password = htmlspecialchars($_POST["retype_password"]);
+if (!empty($_POST["prenom"]) && (!empty($_POST["nom"])) && (!empty($_POST["password"])) && (!empty($_POST["retype_password"]))) {
 
-if (($_POST["password"]) === ($_POST["retype_password"])) {
+    $prenom = htmlspecialchars($_POST["prenom"]);
+    $nom = htmlspecialchars($_POST["nom"]);
+    $password = htmlspecialchars($_POST["password"]);
+    $retype_password = htmlspecialchars($_POST["retype_password"]);
+
+    if (($_POST["password"]) === ($_POST["retype_password"])) {
 
 
-
-
-    if (!empty($_POST["prenom"]) && (!empty($_POST["nom"])) && (!empty($_POST["password"])) && (!empty($_POST["retype_password"]))) {
 
 
         $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `password`, `id`) VALUES (:prenom, :nom , :password, NULL)");
