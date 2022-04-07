@@ -28,6 +28,8 @@ require "db_connect.php"; ?>
             <br>
             <div> <input name="nom" type="text" placeholder="nom"></div>
             <br>
+            <div> <input name="email" type="text" placeholder="email"></div>
+            <br>
             <div> <input name="password" type="text" placeholder="password"></div>
             <br>
             <div> <input name="retype_password" type="text" placeholder="retype_password"></div>
