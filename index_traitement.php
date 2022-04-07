@@ -18,6 +18,7 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))  && (!empty($_POST["emai
         $cost = ['cost' => 12];
         $password = password_hash($password, PASSWORD_BCRYPT, $cost);
 
+
         $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `email`, `date`, `password`, `id`) VALUES (:prenom, :nom, :email, :date, :password, NULL)");
         $insert->execute(array(
             "prenom" => $prenom,
