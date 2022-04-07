@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 session_start();
 require_once "db_connect.php";
 
@@ -15,7 +13,13 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"])) && (!empty($_POST["passw
 
     if (($_POST["password"]) === ($_POST["retype_password"])) {
 
+            
+        // On hash le mot de passe avec Bcrypt, via un coût de 12
+        $cost = ['cost' => 12];
+        $password = password_hash($password, PASSWORD_BCRYPT, $cost); 
 
+        var_dump($_POST);
+        die();
 
 
         $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `password`, `id`) VALUES (:prenom, :nom , :password, NULL)");
