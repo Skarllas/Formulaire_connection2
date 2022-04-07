@@ -18,7 +18,7 @@ require "db_connect.php"; ?>
 <body>
 
     <div id="totoa">
-        <h1>TEST INSERT</h1>
+        <h1>Inscription</h1>
 
     </div>
 
@@ -31,8 +31,10 @@ require "db_connect.php"; ?>
             <br>
             <div> <input name="password" type="text" placeholder="password"></div>
             <br>
-            <div> <button type="submit">Envoye</button></div>
-           
+            <div> <input name="retype_password" type="text" placeholder="retype_password"></div>
+            <br>
+            <div> <button type="submit">S'inscrire</button></div>
+
 
         </form>
     </div>
