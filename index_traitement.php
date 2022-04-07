@@ -4,16 +4,16 @@ error_reporting(E_ALL);
 
 session_start();
 require_once "db_connect.php";
-if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))) {
 
-    $prenom = htmlspecialchars($_POST["prenom"]);
+
+$prenom = htmlspecialchars($_POST["prenom"]);
     $nom = htmlspecialchars($_POST["nom"]);
     $password = htmlspecialchars($_POST["password"]);
 
 
+if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))) {
 
-
-
+    
     $insert = $bdd->prepare("INSERT INTO `membres` (`prenom`, `nom`, `password`, `id`) VALUES (:prenom, :nom , :password, NULL)");
     $insert->execute(array(
         "prenom" => $prenom,
