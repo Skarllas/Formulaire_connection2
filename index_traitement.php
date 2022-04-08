@@ -10,8 +10,6 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))  && (!empty($_POST["emai
     $prenom = htmlspecialchars($_POST["prenom"]);
     $nom = htmlspecialchars($_POST["nom"]);
     $email = htmlspecialchars($_POST["email"]);
-    $password = htmlspecialchars($_POST["password"]);
-    $retype_password = htmlspecialchars($_POST["retype_password"]);
     $date = htmlspecialchars($_POST["date"]);
 
 
