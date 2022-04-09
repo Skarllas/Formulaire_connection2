@@ -26,7 +26,7 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))  && (!empty($_POST["emai
 
     if ($row == 0) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            if (($_POST["password"]) === ($_POST["retype_password"])) {
+            if (($_POST["password"]) === ($_POST["retype_password"])) { 
 
                 $cost = ['cost' => 12];
                 $password = password_hash($password, PASSWORD_BCRYPT, $cost);
