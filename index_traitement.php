@@ -62,6 +62,7 @@ qsdqsdqs
     Salut <?php echo ($prenom) ?>, ton nom est : <?php echo ($nom) ?>.
     <br>
     Ta session est representé par : <?php var_dump($_POST) ?>
+    changement pour git 
 </body>
 
 </html>
