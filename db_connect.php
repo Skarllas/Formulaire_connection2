@@ -2,6 +2,8 @@
 
 
 
+
+
 try {
 
     $bdd = new PDO("mysql:host=localhost;dbname=Pixel_project;charset=utf8", "root", "");
