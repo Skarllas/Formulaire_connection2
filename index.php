@@ -1,6 +1,8 @@
 <?php
 session_start();
-require "db_connect.php"; ?>
+require "db_connect.php";
+
+?>
 
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ require "db_connect.php"; ?>
             <br>
             <div> <input name="retype_password" type="password" placeholder="retype_password"></div>
             <br>
-            <div> <p>Date de naissance : <input name="date" type="text" placeholder="date de naissance"> </p></div>
+            <div> <p>Date de naissance : <input name="date" type="date" placeholder="date de naissance"> </p></div>
             <br>
             <div> <button type="submit">S'inscrire</button></div>
 

@@ -26,7 +26,7 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))  && (!empty($_POST["emai
 
     if ($row == 0) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            if (($_POST["password"]) === ($_POST["retype_password"])) { 
+            if (($_POST["password"]) === ($_POST["retype_password"])) {
 
                 $cost = ['cost' => 12];
                 $password = password_hash($password, PASSWORD_BCRYPT, $cost);
@@ -57,9 +57,14 @@ if (!empty($_POST["prenom"]) && (!empty($_POST["nom"]))  && (!empty($_POST["emai
 
 <body>
 
-    Salut <?php echo ($prenom) ?>, ton nom est : <?php echo ($nom) ?>.
-    <br>
-    Ta session est representé par : <?php var_dump($_POST) ?>
+    <h1>Page de connexion</h1>
+    <form action="connexion.php" method="POST">
+
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="Password" placeholder="password">
+
+        <button type="submit">Se connecter</button>
+    </form>
 </body>
 
 </html>
